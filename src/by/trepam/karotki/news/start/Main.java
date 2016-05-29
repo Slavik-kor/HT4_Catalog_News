@@ -1,5 +1,6 @@
 package by.trepam.karotki.news.start;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import by.trepam.karotki.news.controller.Controller;
@@ -17,11 +18,17 @@ public class Main {
 		View view= new View();
 		
 		Scanner sc= new Scanner(System.in);
-		String line="";
+		String line=null;
 		while ((line=sc.nextLine())!=null){
 			Request request= view.doUserAction(line);
 			Response response=controller.doAction(request);
 			System.out.println(response.getMessage());
+			if(response.getMessageList()!=null){
+				ArrayList<String> list=response.getMessageList();
+				for (int i=0;i<list.size();i++){
+					System.out.println(list.get(i));
+				}
+			}
 		}
 		
 sc.close();
