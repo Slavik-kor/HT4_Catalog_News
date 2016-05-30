@@ -7,6 +7,6 @@ import by.trepam.karotki.news.entity.News;
 
 public interface INewsDAO {
 
-	void saveNews(News news, String subcategory, String category) throws DAOException;
+	boolean saveNews(News news, String subcategory, String category) throws DAOException;
 	Catalog getCatalog() throws DAOException; 
 }

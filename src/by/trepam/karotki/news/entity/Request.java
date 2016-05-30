@@ -9,6 +9,7 @@ public class Request {
 	private String body;
 	private String subCategory;
 	private String category;
+	private String[] commandLine;
 	
 	
 	public String getCommandName(){
@@ -65,6 +66,14 @@ public class Request {
 
 	public void setSubCategory(String subCategory) {
 		this.subCategory = subCategory;
+	}
+
+	public String[] getCommandLine() {
+		return commandLine;
+	}
+
+	public void setCommandLine(String[] commandLine) {
+		this.commandLine = commandLine;
 	}
 
 }

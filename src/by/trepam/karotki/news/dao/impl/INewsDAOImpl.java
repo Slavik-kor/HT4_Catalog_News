@@ -19,9 +19,10 @@ import by.trepam.karotki.news.entity.SubCategory;
 public class INewsDAOImpl implements INewsDAO {
 	private static String fileName = "catalog.xml";
 
-	public void saveNews(News news, String subCategory, String category) throws DAOException {
+	public boolean saveNews(News news, String subCategory, String category) throws DAOException {
 		Catalog catalog=getDataFromFile();
-		for (int i=0;i<catalog.getCategoryList().size();i++)
+		try{
+			for (int i=0;i<catalog.getCategoryList().size();i++)
 		{
 			Category cat=catalog.getCategoryList().get(i);
 			if (cat.getName().toUpperCase().equals(category.toUpperCase())){
@@ -29,14 +30,15 @@ public class INewsDAOImpl implements INewsDAO {
 					SubCategory sub=cat.getSubList().get(j);
 					if (sub.getName().toUpperCase().equals(subCategory.toUpperCase())){
 						sub.addNews(news);
-					}
+					} else{return false;}
 				}
-			}
+			}else{return false;}
 		}
 		
 		setDataToFile(catalog);
-	
+		}catch(DAOException e) {throw new DAOException("Error in DAO layer",e);}
 		
+		return true;
 	}
 
 	private Catalog getDataFromFile() throws DAOException{

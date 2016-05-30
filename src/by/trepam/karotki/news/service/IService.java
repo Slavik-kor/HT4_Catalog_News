@@ -6,7 +6,8 @@ import by.trepam.karotki.news.service.exception.ServiceException;
 
 public interface IService {
 	
-	void saveNewNews(News news,String subCategory, String category) throws ServiceException;
+	boolean saveNewNews(News news,String subCategory, String category) throws ServiceException;
+	
 	Catalog getCatalog() throws ServiceException;
 
 }

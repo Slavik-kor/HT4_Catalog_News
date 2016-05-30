@@ -10,13 +10,14 @@ import by.trepam.karotki.news.service.exception.ServiceException;
 
 public class NewsServiceImpl implements IService{
 	
-	public void saveNewNews(News news,String subcategory,String category) throws ServiceException{
+	public boolean saveNewNews(News news,String subcategory,String category) throws ServiceException{
 		DAOFactory factory=DAOFactory.getInstance();
 		INewsDAO newsDAO=factory.getINewsDAO();
 		try{
-			newsDAO.saveNews(news, subcategory, category);		
+			if (newsDAO.saveNews(news, subcategory, category)){return true;}		
 		}catch(DAOException e){throw new ServiceException("error in Service layer",e);
 		}
+		return false;
 	}
 	
 	public Catalog getCatalog() throws ServiceException{

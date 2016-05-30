@@ -1,4 +1,4 @@
-package by.trepam.karotki.news.start;
+package by.trepam.karotki.news.view;
 
 public class AddDecor {
 	

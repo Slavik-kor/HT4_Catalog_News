@@ -6,6 +6,7 @@ import java.util.Map;
 import by.trepam.karotki.news.command.Command;
 import by.trepam.karotki.news.command.impl.ErrorCommand;
 import by.trepam.karotki.news.command.impl.GetCommand;
+import by.trepam.karotki.news.command.impl.SaveNewNewsCommand;
 import by.trepam.karotki.news.command.impl.TestCommand;
 
 public class CommandHelper {
@@ -15,7 +16,7 @@ public class CommandHelper {
 	public CommandHelper(){
 		commands.put(CommandName.TEST, new TestCommand());
 		commands.put(CommandName.GET, new GetCommand());
-		//commands.put(CommandName.ADD, new AddCommand());
+		commands.put(CommandName.ADD, new SaveNewNewsCommand());
 	}
 	
 	public Command getCommand(String name){
