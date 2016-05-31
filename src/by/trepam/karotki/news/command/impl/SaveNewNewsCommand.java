@@ -25,14 +25,17 @@ public class SaveNewNewsCommand implements Command {
 		Response response = new Response();
 
 		try {
-			if (service.saveNewNews(news, subCategory, category)) {
+			response.setStatus(service.saveNewNews(news, subCategory, category));
+			if (response.isStatus()){
 				response.setMessage(" News was successfully added");
-			} else {
-				response.setMessage("Error!News wasn'n been added!");
-			}
+				}else{
+					response.setErrorMessage( "News wasn't been added!");
+				}
+			
 		} catch (ServiceException e) {
-			response.setErrorMessage("Error in layer command");
 			e.printStackTrace();
+			response.setErrorMessage("Error in layer command");
+			response.setStatus(false);
 		}
 		return response;
 	}

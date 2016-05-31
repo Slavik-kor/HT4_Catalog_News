@@ -15,7 +15,8 @@ public class NewsServiceImpl implements IService{
 		INewsDAO newsDAO=factory.getINewsDAO();
 		try{
 			if (newsDAO.saveNews(news, subcategory, category)){return true;}		
-		}catch(DAOException e){throw new ServiceException("error in Service layer",e);
+		}catch(DAOException e){
+			throw new ServiceException("error in Service layer",e);
 		}
 		return false;
 	}

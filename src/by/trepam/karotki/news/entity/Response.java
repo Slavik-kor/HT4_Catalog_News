@@ -6,6 +6,7 @@ public class Response {
 	private ArrayList<String> messageList;
 	private String respMessage;
 	private String errorMessage;
+	private boolean status;
 	//private Catalog catalog;
 	
 	public String getMessage(){
@@ -38,6 +39,14 @@ public class Response {
 
 	public void setMessageList(ArrayList<String> messageList) {
 		this.messageList = messageList;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 }

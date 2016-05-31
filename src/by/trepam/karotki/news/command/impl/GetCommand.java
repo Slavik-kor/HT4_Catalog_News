@@ -23,7 +23,6 @@ public class GetCommand implements Command{
 		Response response=new Response();
 		try{
 			Catalog catalog=service.getCatalog();
-			//response.addCatalog(catalog);
 			
 			ArrayList<String> list=new ArrayList<String>();
 		    list.add("Каталог");
@@ -41,12 +40,15 @@ public class GetCommand implements Command{
 								"  "+news.getProvider()+"  "+news.getNewsBody());
 					}
 				}
-				
-				
+								
 			}
 			response.setMessageList(list);
-			response.setMessage(commandName+" успешно выполнено");
-		}catch(ServiceException e){ response.setErrorMessage("Error in layer command");}
+			response.setMessage(commandName+" completed");
+			response.setStatus(true);
+		}catch(ServiceException e){
+			e.printStackTrace();
+			response.setErrorMessage("Error in layer command");
+			response.setStatus(false);}
 		return response;
 	}
 

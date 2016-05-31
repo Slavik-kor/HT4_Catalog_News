@@ -10,6 +10,7 @@ public class TestCommand implements Command{
 		String title=request.getCommandName();
 		Response resp= new Response();
 		resp.setMessage("Команда "+title+" успешно выполнена");
+		resp.setStatus(true);
 		return resp;
 	}
 

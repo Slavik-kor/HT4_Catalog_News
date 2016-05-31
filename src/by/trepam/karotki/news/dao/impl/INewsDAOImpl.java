@@ -30,15 +30,19 @@ public class INewsDAOImpl implements INewsDAO {
 					SubCategory sub=cat.getSubList().get(j);
 					if (sub.getName().toUpperCase().equals(subCategory.toUpperCase())){
 						sub.addNews(news);
-					} else{return false;}
+						setDataToFile(catalog);
+						return true;
+					} 
 				}
-			}else{return false;}
+			}
 		}
+			
+		}catch(DAOException e) {
+			e.printStackTrace();
+			throw new DAOException("Error in DAO layer",e);
+			}
 		
-		setDataToFile(catalog);
-		}catch(DAOException e) {throw new DAOException("Error in DAO layer",e);}
-		
-		return true;
+		return false;
 	}
 
 	private Catalog getDataFromFile() throws DAOException{
