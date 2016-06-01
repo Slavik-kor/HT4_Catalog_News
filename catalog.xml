@@ -1,1 +1,79 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><catalog><categoryList name="Категория1"><subCategoryList name="Подкатегория1"><NewsList><newsName>Новость1</newsName><provider>Правда</provider><dateOfIssue>19/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList><NewsList><newsName>Новость3</newsName><provider>газета Правда</provider><dateOfIssue>29/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList><NewsList><newsName>Test</newsName><provider>test</provider><dateOfIssue>test</dateOfIssue><newsBody>test</newsBody></NewsList></subCategoryList><subCategoryList name="Подкатегория2"><NewsList><newsName>Новость2</newsName><provider>газета Правда</provider><dateOfIssue>29/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList></subCategoryList></categoryList><categoryList name="Категория2"><subCategoryList name="Подкатегория3"><NewsList><newsName>Новость3</newsName><provider>газета Правда</provider><dateOfIssue>29/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList></subCategoryList><subCategoryList name="Подкатегория4"><NewsList><newsName>Новость3</newsName><provider>газета Правда</provider><dateOfIssue>29/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList><NewsList><newsName>Новость1</newsName><provider>Правда</provider><dateOfIssue>19/05/2016</dateOfIssue><newsBody>Текст новости</newsBody></NewsList></subCategoryList></categoryList></catalog>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+	<categoryList name="Фильмы">
+		<subCategoryList name="Сериалы">
+			<NewsList>
+				<newsName>Друзья</newsName>
+				<provider>Официальный сайт</provider>
+				<dateOfIssue>19/05/2006</dateOfIssue>
+				<newsBody>Новость о сериале Друзья</newsBody>
+			</NewsList>
+			<NewsList>
+				<newsName>Игра престолов</newsName>
+				<provider>Официальный сайт</provider>
+				<dateOfIssue>01/04/2016</dateOfIssue>
+				<newsBody>Начался новый сезон сериала</newsBody>
+			</NewsList>
+		</subCategoryList>
+		<subCategoryList name="Документальные">
+			<NewsList>
+				<newsName>Каспийский монстр</newsName>
+				<provider>РенТв</provider>
+				<dateOfIssue>29/10/2012</dateOfIssue>
+				<newsBody>Доступен документальный фильм о секрктных разработках </newsBody>
+			</NewsList>
+		</subCategoryList>
+		<subCategoryList name="Боевики">
+			<NewsList>
+				<newsName>Крепкий орешек 4.0</newsName>
+				<provider>Официальный сайт</provider>
+				<dateOfIssue>20/05/2012</dateOfIssue>
+				<newsBody>Текст новости</newsBody>
+			</NewsList>
+		</subCategoryList>
+		<subCategoryList name="Фэнтэзи">
+			<NewsList>
+				<newsName>Властелин колец</newsName>
+				<provider>Официальный сайт</provider>
+				<dateOfIssue>20/05/2015</dateOfIssue>
+				<newsBody>Вышла экранизация продолжения трилогии</newsBody>
+			</NewsList>
+		</subCategoryList>
+	</categoryList>
+	<categoryList name="Диски">
+		<subCategoryList name="ПО">
+			<NewsList>
+				<newsName>Photoshop CC</newsName>
+				<provider>Adobe</provider>
+				<dateOfIssue>20/05/2015</dateOfIssue>
+				<newsBody>Вышло обновление photoshop CC</newsBody>
+			</NewsList>
+		</subCategoryList>
+		<subCategoryList name="Игры">
+			<NewsList>
+				<newsName>HL3</newsName>
+				<provider>Valve</provider>
+				<dateOfIssue>20/05/2015</dateOfIssue>
+				<newsBody>Игра hl3 переносит срок релиза</newsBody>
+			</NewsList>
+		</subCategoryList>
+	</categoryList>
+	<categoryList name="Книги">
+		<subCategoryList name="Классика">
+			<NewsList>
+				<newsName>Евгений Онегин</newsName>
+				<provider>Пушкин А.С.</provider>
+				<dateOfIssue>20/05/2015</dateOfIssue>
+				<newsBody>Доступно электронное издание на сайте</newsBody>
+			</NewsList>
+		</subCategoryList>
+		<subCategoryList name="Фантастика">
+			<NewsList>
+				<newsName>Лабиринт отражений</newsName>
+				<provider>Лукьяненко </provider>
+				<dateOfIssue>20/05/2015</dateOfIssue>
+				<newsBody>Ожидается продолжение трилогии</newsBody>
+			</NewsList>
+		</subCategoryList>
+	</categoryList>
+</catalog>
